@@ -1,7 +1,7 @@
 function lores(){
     const champName = document.getElementById('champName').value
 
-    const url = `http://ddragon.leagueoflegends.com/cdn/10.11.1/data/pt_BR/champion/${champName}.json`
+    const url = `https://ddragon.leagueoflegends.com/cdn/10.11.1/data/pt_BR/champion/${champName}.json`
 
     const loreTitle = document.getElementById('loreTitle')
     const loreText = document.getElementById('loreText')

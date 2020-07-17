@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/IgorDuca/igorduca.github.io#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "nanoid": "^3.1.10"
   }
 }

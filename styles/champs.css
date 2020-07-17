@@ -30,3 +30,9 @@ p{
 .back{
     margin-left: 235px;
 }
+
+#champImg{
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+}

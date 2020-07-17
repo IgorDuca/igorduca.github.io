@@ -1,3 +1,7 @@
+function closePopup(){
+    document.getElementById('bg-modal').style.display = 'none'
+}
+
 function champ(){
     
     const champName = document.getElementById('champ-name').value

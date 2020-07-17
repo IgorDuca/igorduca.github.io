@@ -1,7 +1,7 @@
 function lores(){
     const champName = document.getElementById('champName').value
 
-    const url = `http://ddragon.leagueoflegends.com/cdn/10.14.1/data/pt_BR/champion/${champName}.json`
+    const url = `https://github.com/IgorDuca/igorduca.github.io/blob/master/database/champs.json`
 
     const loreTitle = document.getElementById('loreTitle')
     const loreText = document.getElementById('loreText')
@@ -9,12 +9,14 @@ function lores(){
     fetch(url)
     .then(res => res.json())
     .then(hist =>{
-        const lore = hist.data[champName].lore
+        const lore = hist.data
 
-        loreTitle.innerHTML = (`Lore de ${champName}`)
-        loreTitle.hidden = false;
+        console.log(lore)
 
-        loreText.innerHTML = (`${lore}`)
-        loreText.hidden = false;
+        // loreTitle.innerHTML = (`Lore de ${champName}`)
+        // loreTitle.hidden = false;
+
+        // loreText.innerHTML = (`${lore}`)
+        // loreText.hidden = false;
     })
 }

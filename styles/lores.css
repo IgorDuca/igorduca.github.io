@@ -1,0 +1,21 @@
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+html{
+    background-color: #e31e31;
+}
+
+#confirmar{
+    background-image: url('https://i.imgur.com/iCkPiqv.png');
+    transition: .5s;
+}
+
+#confirmar:hover{
+    background-image: url('https://media.giphy.com/media/QWeIZsh146sY7XPAx8/giphy.gif');
+}
+
+p{
+    color: var(--title-color);
+}

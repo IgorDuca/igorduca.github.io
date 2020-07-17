@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - Lores</title>
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/lores.css">
+
+    <script src="./scripts/lores/main.js"></script>
+
+    <link rel="icon" href="https://i.imgur.com/yCS8R9y.png">
+</head>
+<body>
+    <form>
+        <h1>Shen Lores</h1>
+
+        <label for="champName">Nome do campeão</label>
+        <h3>O nome do campeão precisa iniciar com letras maísculas!</h3>
+        <input type="text" id='champName' name='champName'>
+
+        <button type="button" id='confirmar' onclick="lores()">Confirmar</button>
+
+        <h2 id='loreTitle' hidden>Lore de {nome}</h2>
+
+        <p id='loreText' hidden></p>
+
+        <div class="back">
+            <a href="./index.html">Voltar</a>
+        </div>
+    </form>
+</body>
+</html>

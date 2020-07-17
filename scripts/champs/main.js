@@ -17,8 +17,6 @@ function champ(){
 
     const backBtn = document.getElementById('backBtn')
 
-    button.hidden = true;
-
     var champRequest = [`${champName}`]
 
     console.log(`Campeão pesquisado: ${champRequest}`)
@@ -28,6 +26,8 @@ function champ(){
 
     champImgg.src=url;
     champImgg.hidden = false;
+
+    button.hidden = true;
 
     fetch(url)
     .then(res => res.json())

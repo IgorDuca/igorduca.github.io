@@ -1,0 +1,17 @@
+html{
+    background-color: #15d468;
+}
+
+#confirmar{
+    background-image: url('https://i.imgur.com/fGtl3kI.png');
+    transition: .5s;
+}
+
+#confirmar:hover{
+    background-image: url('https://media.giphy.com/media/KyIaRm6jYlAGyJ86zH/giphy.gif');
+}
+
+#footer{
+    margin-top: 40px;
+    margin-left: 210px;
+}

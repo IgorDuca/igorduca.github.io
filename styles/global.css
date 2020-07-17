@@ -1,0 +1,82 @@
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+  }
+  html{
+    /* Color list: '#fcba03', '#eb4c34', '#4287f5', '#32a852', '#f54281' */
+    
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #322153;
+  }
+  body {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+    width: 80%;
+    margin: 0 auto;
+  }
+  input, textarea, button, p, div, section, article, select {
+    display: 'block';
+    width: 100%;
+    font-size: 1em;
+  }
+  input{
+    border-radius: 8px;
+    border: 0;
+    background-color: var(--title-color);
+    color: white;
+    margin-top: 2vmin;
+  }
+  label, h1, h2, h3, h4, h4, h6{
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+  }
+  h3{
+    font-size: 16px;
+  }
+  ul{
+    list-style: none;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  form{
+    align-items: center;
+    
+    background-color: #f0f0f5; 
+    border-radius: 8px;
+    margin: 80px auto;
+    padding: 64px;
+    max-width: 730px;
+    box-sizing: border-box;
+  }
+  input{
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 24px;
+    padding-left: 20px;
+  }
+  img{
+    align-items: center;
+    margin-left: 220px;
+  }
+
+  form button{
+    width: 260px;
+    height: 56px;
+    margin-top: 40px;
+    margin-left: 160px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 400ms;
+    border: 0;
+  }

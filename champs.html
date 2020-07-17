@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - Champs</title>
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/champs.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="./scripts/champs/main.js"></script>
+
+</head>
+<body>
+    <form>
+        <h1>Shen Champs</h1>
+
+        <label for="champ-name">Nome do campeão</label>
+        <input type="text" id='champ-name' name='champ-name'>
+        <h3>O nome do campeão precisa iniciar com letras maísculas!</h3>
+
+        
+        <img src="" id='champImg' hidden>
+        <h2 id='champPresentation' hidden>Nome do campeão</h2>
+
+        <h4 id='howtowinw' hidden>Como ganhar de {nome}</h4>
+        <p id='allytips' hidden>Ally Tips</p>
+
+        <h4 id='howtowina' hidden>Como ganhar contra um {nome}</h4>
+        <p id='enemytips' hidden>Enemy Tips</p>
+
+        <h4 id='Tpassive' hidden>Sobre a passiva de {nome}</h4>
+        <p id='passiveName' hidden>Nome da passiva: {nome}</p>
+        <p id='passiveDesc' hidden>Descrição da passiva</p>
+
+        <div class="back">
+            <a href="./index.html" hidden id='backBtn'>Voltar</a>
+        </div>
+
+        <button type="button" id='confirm' onclick="champ()"">Confirmar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+    #champs{
+        background-image: url('https://i.imgur.com/e5YIPyN.png');
+        transition: .5s;
+    }
+  
+    #champs:hover{
+      background-image: url('https://media.giphy.com/media/gdYFXzcU6HCbEb7ldq/giphy.gif');
+    }
+  
+    #summo{
+        background-image: url('https://i.imgur.com/quzEbIB.png');
+        transition: .5s;
+    }
+  
+    #summo:hover{
+      background-image: url('https://media.giphy.com/media/xUOxf8G22MSbLmUBJ6/giphy.gif');
+    }
+  
+    #wpp{
+      background-image: url('https://i.imgur.com/fGtl3kI.png');
+      transition: .5s;
+    }
+  
+    #wpp:hover{
+      background-image: url('https://media.giphy.com/media/KyIaRm6jYlAGyJ86zH/giphy.gif');
+    }
+  
+    #lore{
+      background-image: url('https://i.imgur.com/iCkPiqv.png');
+      transition: .5s;
+    }
+  
+    #lore:hover{
+      background-image: url('https://media.giphy.com/media/QWeIZsh146sY7XPAx8/giphy.gif');
+    }
+  
+    #footer{
+      margin-top: 50px;
+      margin-left: 200px;
+    }
+  
+    #shen-img{
+      margin-left: 200px;
+    }
+  
+    #title{
+      margin-left: 210px;
+    }

@@ -6,13 +6,15 @@ function lores(){
     const loreTitle = document.getElementById('loreTitle')
     const loreText = document.getElementById('loreText')
 
-    const options = {
-        method: 'GET'
-    }
-
-    fetch(url, options)
+    fetch(url)
     .then(res => res.json())
     .then(lores => {
-        console.log(lores)
+        const lore = lores.data[champName].lore
+
+        loreTitle.innerHTML = (`Lore de ${champName}`)
+        loreTitle.hidden = false;
+
+        loreText.innerHTML = (`${lore}`)
+        loreText.hidden = false;
     })
 }

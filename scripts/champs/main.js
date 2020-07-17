@@ -21,8 +21,8 @@ function champ(){
 
     console.log(`Campeão pesquisado: ${champRequest}`)
 
-    const url = `http://ddragon.leagueoflegends.com/cdn/10.14.1/data/pt_BR/champion/${champName}.json`
-    const champImg = `http://ddragon.leagueoflegends.com/cdn/10.11.1/img/champion/${champName}.png`
+    const url = `https://ddragon.leagueoflegends.com/cdn/10.14.1/data/pt_BR/champion/${champName}.json`
+    const champImg = `https://ddragon.leagueoflegends.com/cdn/10.11.1/img/champion/${champName}.png`
 
     champImgg.src=url;
     champImgg.hidden = false;

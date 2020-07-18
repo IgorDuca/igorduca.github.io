@@ -1,4 +1,8 @@
 
+    html{
+      background-color: #ff4654;
+    }
+
     #champs{
         background-image: url('https://i.imgur.com/e5YIPyN.png');
         transition: .5s;
@@ -37,7 +41,7 @@
   
     #footer{
       margin-top: 50px;
-      margin-left: 200px;
+      margin-left: 240px;
     }
   
     #shen-img{

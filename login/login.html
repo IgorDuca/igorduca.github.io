@@ -1,29 +1,22 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shen - Login</title>
-
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="./styles/login.css">
-
+  <head>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="547495960913-pqlnlh0udnj28f2cggbh50qcfuh91pam.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-</head>
-<body>
+
+    <link rel="stylesheet" href="./styles/login.css">
+
+    <script src="./scripts/login.js"></script>
+  </head>
+  <body>
     <form>
-        <h1>Faça seu login!</h1>
+      <h1>Faça seu login!</h1>
 
-        <h4>Me lembre de você entrando com sua conta Google</h4>
+      <h4>Faça login pela sua conta Google</h4>
 
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-        <meta name="google-signin-client_id" content="547495960913-pqlnlh0udnj28f2cggbh50qcfuh91pam.apps.googleusercontent.com">
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      <img src="" id='profilePic'>
     </form>
-</body>
+  </body>
 </html>

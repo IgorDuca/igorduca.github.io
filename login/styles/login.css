@@ -1,3 +1,11 @@
 html{
-    background-color: #34eb7d;
+    background-color: #1c252e;
+}
+
+form{
+    margin-top: 100px;
+}
+
+.g-signin2{
+    margin-left: 230px;
 }

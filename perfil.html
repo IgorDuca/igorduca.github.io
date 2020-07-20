@@ -25,7 +25,7 @@
         <h4 id='accountName'>Nome:</h4>
         <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
-        <button type="button" id='signout' onclick="logout()">Sair</button>
+        <button type="button" id='signout' onclick="signOut()">Sair</button>
 
         <script>
             function onSignIn(googleUser) {
@@ -53,16 +53,18 @@
 
             }
 
-            function logout(){
+            function signOut() {
                 var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut.then(function (){
-                    alert("Saindo!")
-                    
-                    setTimeout(() => {
-                        window.location.href = "https://igorduca.github.io/index.html"
-                    }, 1000);
-                })
-            }
+                auth2.signOut().then(function () {
+                console.log('User signed out.');
+
+                alert('Saindo!')
+
+                setTimeout(() => {
+                    window.location.href = "https://igorduca.github.io/index.html"
+                }, 1000);
+            });
+  }
         </script>
     </form>
 </body>

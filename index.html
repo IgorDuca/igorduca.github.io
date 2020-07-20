@@ -59,9 +59,10 @@
 
         continueButton.hidden = false;
 
-        var timeout = 3000;
+        var timeout = 1000;
+        var sec = timeout/1000
 
-        console.log(`Redirecionando em ${timeout} milisegundos!`)
+        console.log(`Redirecionando em ${timeout} milisegundos! ou ${sec} segundos!`)
 
         setTimeout(() => {
           window.location.href = "https://igorduca.github.io/main.html"

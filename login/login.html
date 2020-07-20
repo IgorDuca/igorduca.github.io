@@ -10,6 +10,10 @@
 
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="./styles/login.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="547495960913-pqlnlh0udnj28f2cggbh50qcfuh91pam.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
     <form>
@@ -19,7 +23,7 @@
 
 
         <meta name="google-signin-client_id" content="547495960913-pqlnlh0udnj28f2cggbh50qcfuh91pam.apps.googleusercontent.com">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     </form>
 </body>
 </html>

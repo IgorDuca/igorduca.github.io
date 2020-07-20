@@ -35,13 +35,12 @@
         <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
 
-        <button type="button" onclick="signOut();">Sair</button>
+        <button type="button" onclick="signOut();" id='logoutButton'>Sair</button>
         <script>
             function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
             console.log('Usuário desconectado');
-            alert('Saindo...')
 
             setTimeout(() => {
                 window.location.href = "https://igorduca.github.io/index.html"

@@ -14,7 +14,7 @@
 <body>
     <form>
 
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" hidden></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
         <img src="https://i.imgur.com/ZcDpqSP.png" alt="" id='shen_crown'>
 
@@ -25,7 +25,8 @@
         <button onclick="vip()">VIP</button>
 
         <script>
-            function onSignIn(){
+            function vip(){
+                function onSignIn(){
                 event.preventDefault();
                     
                 var profile = googleUser.getBasicProfile();
@@ -40,12 +41,21 @@
                 var id_token = googleUser.getAuthResponse().id_token;
                 console.log("ID Token: " + id_token);
 
-                function vip(){
-                    event.preventDefault()
+                const id = profile.getId();
 
-                    const accId = profile.getId()
-                    console.log(`Account Id = ${accId}`)
-                }
+                var req = new XMLHttpRequest;
+                req.open('POST', '/vip');
+                req.send(JSON.stringify({ accId: id }))
+
+                req.addEventListener('load', () => {
+                    console.log("Enviado!")
+                })
+
+                req.addEventListener('error', () => {
+                    console.log("Um erro ocorreu!")
+                    console.log(e)
+                })
+            }
             }
 
         </script>

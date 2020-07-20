@@ -50,3 +50,7 @@ form{
   .g-signin2{
       margin-left: 220px;
   }
+
+  #profilePic{
+    border-radius: 50%;
+  }

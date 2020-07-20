@@ -22,6 +22,10 @@
     color: red;
   }
 
+  #profileImg{
+    border-radius: 50%;
+  }
+
   .headHolder li{
     margin-right: 30px;
   }

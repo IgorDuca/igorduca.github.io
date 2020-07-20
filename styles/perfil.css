@@ -76,3 +76,7 @@ form{
     width: 50%;
     height: 50%;
   }
+
+  #signout{
+    background-color: #ff4654;
+  }

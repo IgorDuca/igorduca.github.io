@@ -25,6 +25,8 @@
         <h4 id='accountName'>Nome:</h4>
         <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
+        <button type="button" id='signout' onclick="signout()">Sair</button>
+
         <script>
             function onSignIn(googleUser) {
                 // Useful data for your client-side scripts:
@@ -49,6 +51,13 @@
 
                 profileImage.src = `${profile.getImageUrl()}`
 
+            }
+
+            function signout(){
+                var auth2 = gapi.auth2.getAuthInstance();
+                auth2.signOut.then(function (){
+                    window.location.href = "https://igorduca.github.io/index.html"
+                })
             }
         </script>
     </form>

@@ -1,4 +1,4 @@
-function onSignIn(){
+function onSignIn(googleUser){
     var profile = googleUser.getBasicProfile();
 
     const loginStatus = document.getElementById('loginStatus')

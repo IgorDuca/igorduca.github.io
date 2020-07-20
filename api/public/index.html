@@ -26,20 +26,21 @@
 
         <script>
             function vip(){
-                var profile = googleUser.getBasicProfile();
+                function onSignIn(){
+                    var profile = googleUser.getBasicProfile();
 
-                var accId = profile.getId();
+                    var accId = profile.getId();
 
-                var vipStatus = 'true'
+                    var vipStatus = 'true'
 
-                event.preventDefault()
+                    event.preventDefault()
 
-                var req = new XMLHttpRequest();
-                req.open('POST', '/vip');
-                req.setRequestHeader('Content-Type', 'application/json');
-                req.send(JSON.stringify({ accId }))
+                    var req = new XMLHttpRequest();
+                    req.open('POST', '/vip');
+                    req.setRequestHeader('Content-Type', 'application/json');
+                    req.send(JSON.stringify({ accId }))
 
-                req.addEventListener('load', () => {
+                    req.addEventListener('load', () => {
                     // console.log(req.responseText);
 
                     console.log('Recebido e devolvido!')
@@ -49,6 +50,7 @@
                     console.log("Tive um erro!");
                     console.log(e);
                 })
+                }
             }
         </script>
     </form>

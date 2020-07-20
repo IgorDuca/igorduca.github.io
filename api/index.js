@@ -15,13 +15,7 @@ api.post('/vip', (req, res) => {
     console.log(req.body)
     res.send("Recebido e devolvido!")
 
-    const totalVips = JSON.parse(fs.readFileSync('./database/vips.json'))
-
-    fs.writeFile('./database/vips.json', JSON.stringify(req.body), (err) => {
-        if(err) console.log(err)
-    })
-
-    fs.writeFile('./database/vips.json', JSON.stringify(totalVips), (err) => {
+    fs.writeFileSync('./database/vips.json', JSON.stringify(req.body), (err) => {
         if(err) console.log(err)
     })
 

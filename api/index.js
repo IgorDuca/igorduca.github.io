@@ -1,21 +1,22 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
+const fs = require('fs');
+const { json } = require('body-parser');
 
 const api = express();
-api.use(express.static(__dirname + '/api/public'));
+api.use(express.static(__dirname + '/public'));
 api.use(bodyParser.json());
 
-const port = 7777;
-
-api.listen(port, () => {
-    console.log(`Shen api ouvindo em http://localhost:${port}`);
-});
-
-api.post('/account', (req, res) => {
-    res.send("Você precisa me especificar o id de alguma conta Google!")
+api.listen(3000, () => {
+    console.log('Shen api ouvindo em http://localhost:3000')
 })
 
-api.post('/accvip', (req, res) => {
+api.post('/vip', (req, res) => {
     console.log(req.body)
-    res.send("Funcionou!")
+    res.send("Recebido e devolvido!")
+
+    fs.writeFile('./database/vips.json', JSON.stringify(req.body), (err) => {
+        if(err) console.log(err)
+    })
+
 })

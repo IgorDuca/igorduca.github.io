@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - VIP</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="547495960913-gpq4kpus6ru0ae5vgqo6o74pmgo4t0f1.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <form>
+
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" hidden></div>
+
+        <img src="https://i.imgur.com/ZcDpqSP.png" alt="" id='shen_crown'>
+
+        <h2>Deseja se tornar VIP?</h2>
+
+        <h4>Você pode entrar para o programa de VIPS do Shen com apenas um click!</h4>
+
+        <button onclick="vip()">VIP</button>
+
+        <script>
+            function vip(){
+                var profile = googleUser.getBasicProfile();
+
+                var accId = 'asdasdasds'
+
+                var vipStatus = 'true'
+
+                event.preventDefault()
+
+                var req = new XMLHttpRequest();
+                req.open('POST', '/vip');
+                req.setRequestHeader('Content-Type', 'application/json');
+                req.send(JSON.stringify({ accId }))
+
+                req.addEventListener('load', () => {
+                    // console.log(req.responseText);
+
+                    console.log('Recebido e devolvido!')
+                })
+
+                req.addEventListener('error', () => {
+                    console.log("Tive um erro!");
+                    console.log(e);
+                })
+            }
+        </script>
+    </form>
+</body>
+</html>

@@ -27,7 +27,7 @@
             <li><a href="./lores.html">Lores</a></li>
             <li><a href="./wallpapers.html">Wallpapers</a></li>
             <li><a href="./manutencao.html">Invocadores</a></li>
-            <li><img src="" id='profileImg'></li>
+            <li><img src="" id='profileImg' hidden></li>
         </ul>
     </div>
 </head>
@@ -70,6 +70,11 @@
               console.log('Family Name: ' + profile.getFamilyName());
               console.log("Image URL: " + profile.getImageUrl());
               console.log("Email: " + profile.getEmail());
+
+              const profileImg = document.getElementById('profileImg')
+
+              profileImg.src = profile.getImageUrl();
+              profileImg.hidden = false;
       
               // The ID token you need to pass to your backend:
               var id_token = googleUser.getAuthResponse().id_token;

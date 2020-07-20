@@ -69,7 +69,7 @@
                 const profileImage = document.getElementById('profileImage')
                 const accountLinks = document.getElementById('accountLinks')
 
-                accountName.innerHTML = `Nome da conta: ${profile.getName() / profile.getGivenName()}`
+                accountName.innerHTML = `Nome da conta: ${profile.getGivenName()}`
                 accountLinks.innerHTML = `Contas Vinculadas: Google`
 
                 profileImage.src = `${profile.getImageUrl()}`

@@ -25,7 +25,6 @@
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
     <img src="" id='profilePic' class="profilePic">
-    <h3 id='userName' hidden></h3>
 
     <a href="./main.html">
       <button type="button" hidden id='continueButton'>Continuar</button>
@@ -62,6 +61,10 @@
         userName.hidden = false;
 
         continueButton.hidden = false;
+
+        window.location.href = "https://igorduca.github.io/";
+        window.location.replace("https://igorduca.github.io/main.html");
+
       }
     </script>
   </form>

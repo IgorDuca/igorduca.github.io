@@ -13,6 +13,8 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="547495960913-gpq4kpus6ru0ae5vgqo6o74pmgo4t0f1.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <form action="">
@@ -20,18 +22,30 @@
 
         <h2>Informações da conta</h2>
 
-        <img src="" id='profileImage'>
+        <div class="container">
+            <img src="" id='profileImage'>
+            <div class="overlay">
+                <a href="https://myaccount.google.com/personal-info" class="icon" title="Editar conta">
+                    <i class="fa fa-adjust" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
 
         <h4 id='accountName'>Nome:</h4>
         <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
 
-        <a href="#" onclick="signOut();">Sign out</a>
+        <button type="button" onclick="signOut();">Sair</button>
         <script>
             function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function () {
-            console.log('User signed out.');
+            console.log('Usuário desconectado');
+            alert('Saindo...')
+
+            setTimeout(() => {
+                window.location.href = "https://igorduca.github.io/index.html"
+            }, 1000);
         });
   }
 </script>

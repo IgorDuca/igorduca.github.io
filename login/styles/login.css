@@ -51,6 +51,6 @@ form{
       margin-left: 220px;
   }
 
-  #profilePic{
+  .profilePic{
     border-radius: 50%;
   }

@@ -16,7 +16,7 @@
 
       <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-      <img src="" id='profilePic'>
+      <img src="" id='profilePic' class="profilePic">
       <script>
         function onSignIn(googleUser) {
           // Useful data for your client-side scripts:
@@ -35,7 +35,7 @@
           var loginStatus = document.getElementById('loginStatus')
           var profilePic = document.getElementById('profilePic')
 
-          loginStatus.innerHTML = (`Eu já te conheço como ${profile.getName}`)
+          loginStatus.innerHTML = ("Eu já te conheço")
 
           profilePic.src = `${profile.getImageUrl()}`
           profilePic.hidden = false;

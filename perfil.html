@@ -20,7 +20,7 @@
 
         <h2>Informações da conta</h2>
 
-        <img src="https://i.pinimg.com/originals/aa/fb/f4/aafbf4e572f78ddcde1a0c4561759c6a.jpg" id='profileImage'>
+        <img src="" id='profileImage'>
 
         <h4 id='accountName'>Nome:</h4>
         <h4>Contas Vinculadas:</h4>
@@ -41,8 +41,11 @@
                 console.log("ID Token: " + id_token);
 
                 const accountName = document.getElementById('accountName')
+                const profileImage = document.getElementById('profileImage')
 
                 accountName.innerHTML = `Nome da conta: ${profile.getName()}`
+
+                profileImage.src = `${profile.getImageUrl()}`
 
             }
         </script>

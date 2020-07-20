@@ -20,7 +20,7 @@
   <form>
     <h1 id='loginStatus'>Faça seu login!</h1>
 
-    <h4>Faça login pela sua conta Google</h4>
+    <h4 id='welcomeText'>Faça login pela sua conta Google</h4>
 
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
@@ -52,7 +52,10 @@
 
         var userName = document.getElementById('userName')
 
-        loginStatus.innerHTML = "Eu já te conheço"
+        var welcomeText = document.getElementById('welcomeText')
+
+        loginStatus.innerHTML = "Entrou com sucesso!"
+        welcomeText.innerHTML = `Seja bem vindo! ${profile.getGivenName}`
 
         profilePic.src = `${profile.getImageUrl()}`
         profilePic.hidden = false;

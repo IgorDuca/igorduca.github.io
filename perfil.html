@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - Perfil</title>
+
+    <link rel="stylesheet" href="./styles/perfil.css">
+
+    
+    <link rel="icon" href="https://i.imgur.com/yCS8R9y.png">
+
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="547495960913-gpq4kpus6ru0ae5vgqo6o74pmgo4t0f1.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <form action="">
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+        <h2>Informações da conta</h2>
+
+        <img src="https://i.pinimg.com/originals/aa/fb/f4/aafbf4e572f78ddcde1a0c4561759c6a.jpg" id='profileImage'>
+
+        <h4 id='accountName'>Nome:</h4>
+        <h4>Contas Vinculadas:</h4>
+
+        <script>
+            function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
+
+                // The ID token you need to pass to your backend:
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+
+                const accountName = document.getElementById('accountName')
+
+                accountName.innerHTML = `Nome da conta: ${profile.getName()}`
+
+            }
+        </script>
+    </form>
+</body>
+</html>

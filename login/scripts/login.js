@@ -9,4 +9,7 @@ function onSignIn(){
     profilePic.hidden = false;
 
     loginStatus.innerHTML = "Agora me lembro de você!"
+
+    var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
 }

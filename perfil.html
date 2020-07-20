@@ -16,14 +16,14 @@
 </head>
 <body>
     <form action="">
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" hidden></div>
 
         <h2>Informações da conta</h2>
 
         <img src="" id='profileImage'>
 
         <h4 id='accountName'>Nome:</h4>
-        <h4>Contas Vinculadas:</h4>
+        <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
         <script>
             function onSignIn(googleUser) {
@@ -42,8 +42,10 @@
 
                 const accountName = document.getElementById('accountName')
                 const profileImage = document.getElementById('profileImage')
+                const accountLinks = document.getElementById('accountLinks')
 
                 accountName.innerHTML = `Nome da conta: ${profile.getName()}`
+                accountLinks.innerHTML = `Contas Vinculadas: Google`
 
                 profileImage.src = `${profile.getImageUrl()}`
 

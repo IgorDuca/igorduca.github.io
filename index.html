@@ -1,60 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt_BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shen!</title>
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="547495960913-gpq4kpus6ru0ae5vgqo6o74pmgo4t0f1.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="./login/styles/login.css">
 
-    <script src="./scripts/main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <script src="./scripts/login.js"></script> -->
+  </head>
+  <body>
+    <form>
+      <h1 id='loginStatus'>Faça seu login!</h1>
 
-    <link rel="icon" href="https://i.imgur.com/yCS8R9y.png">
-</head>
-<body>
-    <form id='content'>
-        
-        <div class="shen" id='shen'>
-            <img src='https://i.imgur.com/yCS8R9y.png' id='shen-img'>
-        </div>
+      <h4>Faça login pela sua conta Google</h4>
 
-        <h2>Qual seu interesse?</h2>
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-        <a href="./champs.html">
-            <button type="button" id='champs'>Campeões</button>
-        </a>
+      <img src="" id='profilePic' class="profilePic">
 
-        <a href="./manutencao.html">
-            <button type="button" id='summo'>Invocadores</button>
-        </a>
+      <a href="./main.html">
+        <button type="button" hidden id='continueButton'>Continuar</button>
+      </a>
+      
+      <script>
+        function onSignIn(googleUser) {
+          // Useful data for your client-side scripts:
+          var profile = googleUser.getBasicProfile();
+          console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+          console.log('Full Name: ' + profile.getName());
+          console.log('Given Name: ' + profile.getGivenName());
+          console.log('Family Name: ' + profile.getFamilyName());
+          console.log("Image URL: " + profile.getImageUrl());
+          console.log("Email: " + profile.getEmail());
+  
+          // The ID token you need to pass to your backend:
+          var id_token = googleUser.getAuthResponse().id_token;
+          console.log("ID Token: " + id_token);
 
-        <a href="./wallpapers.html">
-            <button type="button" id='wpp'>Wallpapers</button>
-        </a>
+          var loginStatus = document.getElementById('loginStatus')
+          var profilePic = document.getElementById('profilePic')
 
-        <a href="./lores.html">
-            <button type="button" id='lore'>Lores</button>
-        </a>
+          var continueButton = document.getElementById('continueButton')
 
-        <div class="footer" id='footer'>
-            <a href="https://twitter.com/IgorDutz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @IgorDutz</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+          loginStatus.innerHTML = "Eu já te conheço"
 
+          profilePic.src = `${profile.getImageUrl()}`
+          profilePic.hidden = false;
+
+          continueButton.hidden = false;
+        }
+      </script>
     </form>
-
-    
-    <div class="bg-modal" id='bg-modal'>
-        <div class="modal-content">
-            <div class="close" onclick="closePopup()">+</div>
-
-            <img src="https://i.imgur.com/NOCMspc.png" id='shen-popup-img'>
-            <h3>Queria te fazer um pedido...</h3>
-            <h3>Me siga no meu twitter, @ShenAppOfficial</h3>
-            <a href="https://twitter.com/ShenAppOfficial?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ShenAppOfficial</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <h3>Desde já, agradeço! 👻</h3>
-        </div>
-    </div>
-</body>
+  </body>
 </html>

@@ -54,3 +54,18 @@ form{
   .profilePic{
     border-radius: 50%;
   }
+
+  button{
+    width: 260px;
+    height: 56px;
+    margin-top: 40px;
+    margin-left: 160px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 400ms;
+    border: 0;
+  }

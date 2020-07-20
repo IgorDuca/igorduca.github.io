@@ -55,7 +55,7 @@
         var welcomeText = document.getElementById('welcomeText')
 
         loginStatus.innerHTML = "Entrou com sucesso!"
-        welcomeText.innerHTML = `Seja bem vindo! ${profile.getGivenName}`
+        welcomeText.innerHTML = `Seja bem vindo! ${profile.getGivenName()}`
 
         profilePic.src = `${profile.getImageUrl()}`
         profilePic.hidden = false;

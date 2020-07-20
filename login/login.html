@@ -10,7 +10,7 @@
   </head>
   <body>
     <form>
-      <h1>Faça seu login!</h1>
+      <h1 id='loginStatus'>Faça seu login!</h1>
 
       <h4>Faça login pela sua conta Google</h4>
 
@@ -31,6 +31,14 @@
           // The ID token you need to pass to your backend:
           var id_token = googleUser.getAuthResponse().id_token;
           console.log("ID Token: " + id_token);
+
+          var loginStatus = document.getElementById('loginStatus')
+          var profilePic = document.getElementById('profilePic')
+
+          loginStatus.innerHTML = `Já te conheço como ${profile.getName}`
+
+          profilePic.src = profile.getImageUrl();
+          profilePic.hidden = false;
         }
       </script>
     </form>

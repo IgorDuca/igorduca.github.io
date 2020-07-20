@@ -1,10 +1,17 @@
 <html lang="en">
   <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - Login</title>
+
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="547495960913-gpq4kpus6ru0ae5vgqo6o74pmgo4t0f1.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <link rel="stylesheet" href="./login/styles/login.css">
+
+    <link rel="icon" href="https://i.imgur.com/yCS8R9y.png">
 
     <!-- <script src="./scripts/login.js"></script> -->
   </head>
@@ -17,6 +24,7 @@
       <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
       <img src="" id='profilePic' class="profilePic">
+      <h3 id='userName' hidden></h3>
 
       <a href="./main.html">
         <button type="button" hidden id='continueButton'>Continuar</button>
@@ -42,10 +50,15 @@
 
           var continueButton = document.getElementById('continueButton')
 
+          var userName = document.getElementById('userName')
+
           loginStatus.innerHTML = "Eu já te conheço"
 
           profilePic.src = `${profile.getImageUrl()}`
           profilePic.hidden = false;
+
+          userName.innerHTML = `${userName}`
+          userName.hidden = false;
 
           continueButton.hidden = false;
         }

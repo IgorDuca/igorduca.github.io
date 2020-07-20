@@ -25,7 +25,17 @@
         <h4 id='accountName'>Nome:</h4>
         <h4 id='accountLinks'>Contas Vinculadas:</h4>
 
-        <button type="button" id='signout' onclick="signOut();">Sair</button>
+
+        <a href="#" onclick="signOut();">Sign out</a>
+        <script>
+            function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+  }
+</script>
+        
 
         <script>
             function onSignIn(googleUser) {
@@ -52,13 +62,6 @@
                 profileImage.src = `${profile.getImageUrl()}`
 
             }
-
-            function signOut() {
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function () {
-                console.log('User signed out.');
-            });
-  }
         </script>
     </form>
 </body>

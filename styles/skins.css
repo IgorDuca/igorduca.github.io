@@ -1,0 +1,18 @@
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+#confirmButton{
+    display: block;
+    margin-bottom: 25px;
+}
+
+select{
+    color: var(--title-color);
+    border-radius: 8px;
+}
+
+body{
+    background-color: #2ad1b2;
+}

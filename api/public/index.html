@@ -25,11 +25,21 @@
 
                 var req = new XMLHttpRequest();
 
-                const name = 'Ldkalsdkla'
+                const name = 'JOrginhoGames'
 
-                const id = '319283918293'
+                const givenName = 'Gorje'
 
-                const request = [name, id]
+                const id = '1231k2j3k12j3k1jkjkdkasjkda_dadasid'
+
+                const request = {
+                    name: name,
+                    [name]: {
+                        name: name,
+                        id: id,
+                        vip: "true",
+                        givenName: givenName
+                    }
+                }
 
                 req.open('POST', '/vip');
                 req.setRequestHeader('Content-Type', 'application/json');

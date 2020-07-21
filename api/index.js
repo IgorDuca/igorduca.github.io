@@ -13,10 +13,30 @@ api.listen(3000, () => {
 
 api.post('/vip', (req, res) => {
     console.log(req.body)
+    console.log(req.body.name)
+
+    const name = req.body.name
+
+    console.log(`Is vip: ${req.body[name].vip}`)
+
     res.send("Recebido e devolvido!")
 
-    fs.writeFileSync('./database/vips.json', JSON.stringify(req.body), (err) => {
+    fs.writeFile(`./database/vips/${name}.json`, JSON.stringify(req.body, null, 2), (err) => {
         if(err) console.log(err)
     })
 
 })
+
+api.get(`/vips`, (req, res) => {
+    const vipsFolder = './database/vips'
+
+    fs.readdirSync(vipsFolder).forEach(file => {
+        console.log(file);
+
+        res.send(file)
+    });
+})
+
+api.get(`/vips/`, (req, res) => [
+
+])

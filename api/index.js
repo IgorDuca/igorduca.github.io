@@ -27,6 +27,10 @@ api.post('/vip', (req, res) => {
 
 })
 
+api.get('/', (req, res) => {
+    res.send(`Especifique algum requerimento`)
+})
+
 api.get(`/vips`, (req, res) => {
     const vipsFolder = './database/vips'
 

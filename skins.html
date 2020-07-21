@@ -21,6 +21,8 @@
         <label for="skinSelector" hidden id='selectorLabel'>Número da Skin</label>
         <select name="skinSelector" id="skinSelector" hidden onchange="skinSelected()">
         </select>
+
+        <h3 id='tip' hidden>Dica: Quanto maior o número, mais recente é a skin</h3>
     </form>
 
     <script>
@@ -63,6 +65,9 @@
 
             window.open(skinUrl)
             window.location.href = "https://igorduca.github.io/skins.html"
+
+            const tip = document.getElementById('tip')
+            tip.hidden = false;
         }
     </script> 
 

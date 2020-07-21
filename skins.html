@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shen - Skins</title>
+</head>
+<body>
+    <h1>Shen - Skins</h1>
+
+    <input type="text" id='champName' placeholder="Nome do campeão">
+    <button type="button" onclick="confirm()">Confirmar</button>
+
+    <script>
+        function confirm(){
+            const champName = document.getElementById('champName').value
+
+            const url = `https://ddragon.leagueoflegends.com/cdn/10.11.1/data/pt_BR/champion/${champName}.json`
+
+            fetch(url)
+            .then(res => res.json())
+            .then(champ => {
+                const skins = champ.data[champName].skins
+                
+                console.log(skins)
+            })
+        }
+    </script> 
+</body>
+</html>

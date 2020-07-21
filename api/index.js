@@ -27,7 +27,7 @@ api.post('/vip', (req, res) => {
 
 })
 
-api.get('/', (req, res) => {
+api.get('/*', (req, res) => {
     res.send(`Especifique algum requerimento`)
 })
 

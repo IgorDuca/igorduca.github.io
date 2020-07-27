@@ -29,7 +29,7 @@
         function confirm(){
             const champName = document.getElementById('champName').value
 
-            const url = `https://ddragon.leagueoflegends.com/cdn/10.11.1/data/pt_BR/champion/${champName}.json`
+            const url = `https://ddragon.leagueoflegends.com/cdn/10.15.1/data/pt_BR/champion/${champName}.json`
 
             fetch(url)
             .then(res => res.json())
